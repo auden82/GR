@@ -1,0 +1,426 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+
+/* Logo and tagline */
+.logo {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.tagline {
+  text-align: center;
+  color: #bbb;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Swiper styles */
+.swiper {
+  width: 100vw;
+  max-width: 480px;
+  margin: 20px auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mySwiper2 {
+  aspect-ratio: 16 / 9;
+  max-width: 480px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .mySwiper2 {
+    height: calc(100vw * 3 / 4);
+  }
+}
+
+.mySwiper2 .slide-caption-below {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.swiper-slide {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cropped-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.2);
+  border-radius: 12px;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.slide-copy {
+  height: 100%;
+  padding: 40px 20px;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.slide-copy h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.slide-copy p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Popup Font Test - Confirmed*/
+.slide-content p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+/* Swiper pagination */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+.swiper-pagination-bullet {
+  background: grey !important;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+/* Added Code */
+
+.mySwiper2 .swiper-pagination {
+  pointer-events: none;
+}
+
+/* Caption Swiper99 Added */
+
+/* Image Swiper */
+.mySwiper99 {
+    aspect-ratio: 20 / 9;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.mySwiper99 .swiper-slide {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mySwiper99 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Caption Swiper2 Added */
+
+.mySwiper2-captions {
+  margin: 20px auto 60px;
+  aspect-ratio: unset;
+}
+
+.mySwiper2-captions .swiper-slide {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0));
+  border-radius: 12px;
+  padding: 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mySwiper2-captions .swiper-slide-active {
+  background-color: #222;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.info-card p {
+  font-size: 14px;
+  margin: 0;
+  color: #aaa;
+}
+
+
+/* Caption container Maybe Remove*/ 
+.caption-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.slide-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide-description {
+  font-size: 16px;
+  color: #ccc;
+}
+
+
+/* Timeline styles */
+.timeline-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.year-column {
+  width: 100px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background: #111;
+  padding: 20px 10px;
+  z-index: 10;
+  align-items: flex-start;
+}
+
+.year-column span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #888;
+  transform: scale(0.8);
+  transform-origin: left center;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.year-column span.active {
+  transform: scale(1.6);
+  font-weight: bold;
+  color: #fff;
+  opacity: 1;
+}
+
+.year-column span.near {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.year-column span.far {
+  transform: scale(0.85);
+  opacity: 0.4;
+}
+
+.product-column {
+  flex: 1;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.card-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    flex-direction: row;
+  }
+
+  .year-column {
+    width: 60px;
+  }
+
+  .year-column span {
+    font-size: 12px;
+  }
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.95);
+  color: #fff;
+  z-index: 9999;
+  display: none;
+}
+
+/* Add when popup should be visible */
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-content {
+  background: #111;
+  color: #fff;
+  padding: 5vh;
+  width: 100%;
+  max-width: 600px;
+  max-height: 100vh; /* This enables scrolling if content is taller */
+  overflow-y: auto;
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+body.popup-open {
+  overflow: hidden;
+}
+
+.more-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.more-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/*dropdown test*/
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-toggle .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.active .arrow {
+  transform: rotate(90deg); /* Rotates arrow to point down */
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown-content.open {
+  max-height: 1500px;
+}
